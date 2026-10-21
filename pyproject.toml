@@ -1,0 +1,22 @@
+[project]
+name = "transcript-maker"
+version = "0.2.0"
+description = "Clean, timestamped YouTube transcripts: captions spot-checked against Whisper, with full Whisper fallback"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Yajat Ghule" }]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+whisper = ["faster-whisper"]
+
+[project.scripts]
+transcript-maker = "transcript_maker.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/YajatGhule/transcript-maker"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
